@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #12161C;
+    color: #F0F0F5;
+  }
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .header {
+    background-color: #171822;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+  }
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 18px;
+  }
+  .nav {
+    display: flex;
+    gap: 12px;
+  }
+  .nav-item {
+    color: #F0F0F5;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  .nav-item:hover, .nav-item.active {
+    color: #7E9AFF;
+  }
+  .user-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .connect-btn, #refresh-btn {
+    background-color: transparent;
+    color: #7E9AFF;
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .connect-btn:hover, #refresh-btn:hover {
+    color: #584CEA;
+  }
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  p {
+    font-size: 18px;
+    color: #B2B4C6;
+  }
