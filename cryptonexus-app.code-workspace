@@ -1,0 +1,11 @@
+{
+    "folders": [
+      {
+        "path": "cryptonexus-app"
+      }
+    ],
+    "settings": {
+      "editor.formatOnSave": true,
+      "javascript.suggest.completeFunctionCalls": true
+    }
+  }
