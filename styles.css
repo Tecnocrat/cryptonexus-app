@@ -23,9 +23,10 @@ body {
     width: 100%;
   }
   .logo {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     margin-right: 18px;
+    box-shadow: 0 2px 8px #0002;
   }
   .nav {
     display: flex;
@@ -35,10 +36,17 @@ body {
     color: #F0F0F5;
     text-decoration: none;
     font-size: 14px;
-    padding: 6px 12px;
+    padding: 6px 16px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
   .nav-item:hover, .nav-item.active {
     color: #7E9AFF;
+    background: #23243a;
+    box-shadow: 0 2px 8px #0002;
   }
   .user-actions {
     display: flex;
@@ -69,3 +77,112 @@ body {
     font-size: 18px;
     color: #B2B4C6;
   }
+  /* Spinner styles */
+.spinner {
+  border: 6px solid #222;
+  border-top: 6px solid #f9d923;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+  margin: 32px auto;
+  display: none;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.connect-btn {
+  position: relative;
+}
+.connect-btn[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  top: 120%;
+  transform: translateX(-50%);
+  background: #23243a;
+  color: #f9d923;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px #0002;
+  z-index: 10;
+}
+#refresh-btn {
+  position: relative;
+}
+#refresh-btn[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  top: 120%;
+  transform: translateX(-50%);
+  background: #23243a;
+  color: #7E9AFF;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px #0002;
+  z-index: 10;
+}
+#debug-btn {
+  position: relative;
+}
+#debug-btn[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  top: 120%;
+  transform: translateX(-50%);
+  background: #23243a;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px #0002;
+  z-index: 10;
+}
+@media (max-width: 700px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .nav {
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+  }
+  .user-actions {
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+  }
+  .main-content {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media (max-width: 400px) {
+  .header {
+    height: 48px;
+    padding: 0 6px;
+  }
+  .logo {
+    width: 24px;
+    height: 24px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+}

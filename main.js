@@ -25,3 +25,20 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });
+
+function showSpinner() {
+  document.getElementById('spinner').style.display = 'block';
+}
+function hideSpinner() {
+  document.getElementById('spinner').style.display = 'none';
+}
+async function updatePrice() {
+  showSpinner();
+  try {
+    // ...existing code...
+    document.getElementById('price').textContent = `Bitcoin Price: $${price}`;
+  } catch (err) {
+    document.getElementById('price').textContent = 'Error loading price.';
+  }
+  hideSpinner();
+}
