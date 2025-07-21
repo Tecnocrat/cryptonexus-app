@@ -6,10 +6,10 @@
 - [DONE] Responsive layout for different window sizes.
 
 ### Functional Enhancements
-- Implement wallet connection logic (MetaMask, WalletConnect).
-- Make the “Stats” tab functional (show price history, charts).
-- Add buy/sell mock trading actions.
-- Enable debug mode toggle to show extra info/logs.
+- [DONE] Implement wallet connection logic (MetaMask, WalletConnect).
+- [DONE] Make the “Stats” tab functional (show price history, charts).
+- [DONE] Add buy/sell mock trading actions.
+- [DONE] Enable debug mode toggle to show extra info/logs.
 
 ### Visuals
 - Integrate a 3D chart or animated visualization for price changes.
